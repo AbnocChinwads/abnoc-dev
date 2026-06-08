@@ -4,7 +4,7 @@ export const projects = [
         description: "A personal portfolio and developer CV built with Next.js and deployed to my self-hosted environment.",
         tech: "Next.js, TypeScript",
         learning: "Learning modern React-based frameworks and deployment workflows.",
-        featured: true,
+        featured: false,
     },
     {
         title: "PoE2 Randomiser",
@@ -25,6 +25,6 @@ export const projects = [
         description: "A self-hosted environment used to deploy and run my applications.",
         tech: "Linux, Docker, Caddy, Cloudflare Tunnels, GitHub Actions",
         learning: "Deployment workflows, containerisation, and server management.",
-        featured: false,
+        featured: true,
     },
 ];

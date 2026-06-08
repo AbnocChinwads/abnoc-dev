@@ -3,6 +3,8 @@ import ProjectCard from "./components/ProjectCard";
 import { projects } from "./data/projects";
 
 export default function Home() {
+  const featuredProjects = projects.filter((p) => p.featured);
+
   return (
     <main>
       {/* HERO */}
@@ -29,7 +31,7 @@ export default function Home() {
       <section>
         <h3>Featured Projects</h3>
 
-        {projects.slice(0, 2).map((project) => (
+        {featuredProjects.map((project) => (
           <ProjectCard
             key={project.title}
             title={project.title}
