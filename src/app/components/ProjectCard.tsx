@@ -1,29 +1,76 @@
 type ProjectCardProps = {
-    title: string;
-    description: string;
-    tech: string;
-    learning: string;
+  title: string;
+  description: string;
+  tech?: string;
+  learning?: string;
+  github?: string;
+  live?: string;
+  tags?: string[];
+  variant?: "full" | "compact";
 };
 
-export default function ProjectCard ({
-    title,
-    description,
-    tech,
-    learning,
+export default function ProjectCard({
+  title,
+  description,
+  tech,
+  learning,
+  github,
+  live,
+  tags,
+  variant = "full",
 }: ProjectCardProps) {
-    return (
-        <section>
-            <h4>{title}</h4>
+  return (
+    <section>
+      <h4>{title}</h4>
 
-            <p>{description}</p>
+      {tags && tags.length > 0 && (
+        <div>
+          {tags.map((tag) => (
+            <span key={tag}>{tag}</span>
+          ))}
+        </div>
+      )}
 
+      <p>{description}</p>
+
+      {variant === "full" && (
+        <>
+          {tech && (
             <p>
-                <strong>Tech:</strong> {tech}
+              <strong>Tech:</strong> {tech}
             </p>
-
+          )}
+          {learning && (
             <p>
-                <strong>Learning:</strong> {learning}
+              <strong>Learning:</strong> {learning}
             </p>
-        </section>
-    );
+          )}
+
+          {(github || live) && (
+            <section>
+              <h5>Links</h5>
+
+              <ul>
+                {github && (
+                  <li>
+                    <a href={github} target="_blank" rel="noreferrer">
+                      GitHub
+                    </a>
+                  </li>
+                )}
+
+                {live && (
+                  <li>
+                    <a href={live} target="_blank" rel="noreferrer">
+                      Live
+                    </a>
+                  </li>
+                )}
+              </ul>
+            </section>
+          )}
+        </>
+      )}
+    </section>
+  );
 }

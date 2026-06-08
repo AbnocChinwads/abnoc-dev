@@ -36,8 +36,7 @@ export default function Home() {
             key={project.title}
             title={project.title}
             description={project.description}
-            tech={project.tech}
-            learning={project.learning}
+            variant="compact"
           />
         ))}
 
