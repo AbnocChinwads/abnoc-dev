@@ -6,21 +6,28 @@ export default function Home() {
   const featuredProjects = projects.filter((p) => p.featured);
 
   return (
-    <main>
+    <main className="max-w-3xl mx-auto w-full px-4 py-10 space-y-12">
       {/* HERO */}
-      <section>
-        <h1>AbnocChinwads</h1>
+      <section className="space-y-2">
+        <div>
+          <span className="text-green-200">{">"}</span>{" "}
+          <span className="font-bold">AbnocChinwads</span>
+        </div>
 
-        <p>
+        <p className="ml-4">
           Developer focused on web applications, self-hosted infrastructure, and
           currently learning full-stack systems with Next.js and Node.js.
         </p>
       </section>
 
       {/* POSITIONING */}
-      <section>
-        <h3>What I build</h3>
-        <p>
+      <section className="space-y-2">
+        <div>
+          <span className="text-green-200">{">"}</span>{" "}
+          <span className="font-bold">What I build</span>
+        </div>
+
+        <p className="ml-4">
           I build and self-host web applications while learning modern
           full-stack development through practical projects and infrastructure
           work.
@@ -28,8 +35,11 @@ export default function Home() {
       </section>
 
       {/* FEATURED WORK */}
-      <section>
-        <h3>Featured Projects</h3>
+      <section className="space-y-4">
+        <div>
+          <span className="text-green-200">{">"}</span>{" "}
+          <span className="font-bold">Featured Projects</span>
+        </div>
 
         {featuredProjects.map((project) => (
           <ProjectCard
@@ -40,7 +50,7 @@ export default function Home() {
           />
         ))}
 
-        <Link href="/projects">View all projects</Link>
+        <Link href="/projects">[View all projects]</Link>
       </section>
     </main>
   );

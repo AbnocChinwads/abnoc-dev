@@ -18,61 +18,49 @@ export default function ProjectCard({
   variant = "full",
 }: ProjectCardProps) {
   return (
-    <section>
-      <h4>{title}</h4>
+    <article className="mb-10 space-y-2">
+      {/* Title line (like terminal header output) */}
+      <div>
+        <span className="text-green-200">{">"}</span>{" "}
+        <span className="font-bold">{title}</span>
+      </div>
 
-      <p>{description}</p>
+      {/* Description */}
+      <p className="ml-4">{description}</p>
 
-      {variant === "full" && (
-        <>
-          {tech && (
-            <p>
-              <strong>Tech:</strong>
-              {tech && tech.length > 0 && (
-                <div className="flex flex-wrap gap-2 mt-2">
-                  {tech.map((item) => (
-                    <span
-                      key={item}
-                      className="px-2 py-1 text-xs border rounded-md bg-gray-400"
-                    >
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              )}
-            </p>
-          )}
-          {learning && (
-            <p>
-              <strong>Learning:</strong> {learning}
-            </p>
-          )}
-
-          {(github || live) && (
-            <section>
-              <h5>Links</h5>
-
-              <ul>
-                {github && (
-                  <li>
-                    <a href={github} target="_blank" rel="noreferrer">
-                      GitHub
-                    </a>
-                  </li>
-                )}
-
-                {live && (
-                  <li>
-                    <a href={live} target="_blank" rel="noreferrer">
-                      Live
-                    </a>
-                  </li>
-                )}
-              </ul>
-            </section>
-          )}
-        </>
+      {/* Learning / reflection */}
+      {learning && (
+        <p className="ml-4 text-green-300">
+          <span className="text-green-200">learning:</span> {learning}
+        </p>
       )}
-    </section>
+
+      {/* Tech tags */}
+      {tech && tech.length > 0 && (
+        <div className="ml-8 flex flex-wrap gap-2">
+          {tech.map((item) => (
+            <span key={item} className="text-xs text-green-300">
+              [{item}]
+            </span>
+          ))}
+        </div>
+      )}
+
+      {/* Links */}
+      {variant === "full" && (github || live) && (
+        <div className="ml-8 text-sm">
+          {github && (
+            <a className="mr-4 underline" href={github}>
+              GitHub
+            </a>
+          )}
+          {live && (
+            <a className="underline" href={live}>
+              Live
+            </a>
+          )}
+        </div>
+      )}
+    </article>
   );
 }

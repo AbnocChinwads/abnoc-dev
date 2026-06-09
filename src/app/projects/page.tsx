@@ -3,11 +3,12 @@ import { projects } from "../data/projects";
 
 export default function Projects() {
   return (
-    <main>
+    <main className="max-w-3xl mx-auto w-full px-4 py-10 space-y-12">
       <h2>Projects</h2>
 
-      {projects.map((project) => (
-        <ProjectCard
+      <div>
+        {projects.map((project) => (
+          <ProjectCard
             key={project.title}
             title={project.title}
             description={project.description}
@@ -16,8 +17,9 @@ export default function Projects() {
             github={project.github}
             live={project.live}
             variant="full"
-        />
-      ))}
+          />
+        ))}
+      </div>
     </main>
   );
 }
