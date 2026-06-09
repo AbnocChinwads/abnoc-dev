@@ -1,11 +1,10 @@
 type ProjectCardProps = {
   title: string;
   description: string;
-  tech?: string;
+  tech?: string[];
   learning?: string;
   github?: string;
   live?: string;
-  tags?: string[];
   variant?: "full" | "compact";
 };
 
@@ -16,20 +15,11 @@ export default function ProjectCard({
   learning,
   github,
   live,
-  tags,
   variant = "full",
 }: ProjectCardProps) {
   return (
     <section>
       <h4>{title}</h4>
-
-      {tags && tags.length > 0 && (
-        <div>
-          {tags.map((tag) => (
-            <span key={tag}>{tag}</span>
-          ))}
-        </div>
-      )}
 
       <p>{description}</p>
 
@@ -37,7 +27,19 @@ export default function ProjectCard({
         <>
           {tech && (
             <p>
-              <strong>Tech:</strong> {tech}
+              <strong>Tech:</strong>
+              {tech && tech.length > 0 && (
+                <div className="flex flex-wrap gap-2 mt-2">
+                  {tech.map((item) => (
+                    <span
+                      key={item}
+                      className="px-2 py-1 text-xs border rounded-md bg-gray-400"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              )}
             </p>
           )}
           {learning && (

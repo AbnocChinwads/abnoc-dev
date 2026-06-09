@@ -10,7 +10,6 @@ export default function Projects() {
         <ProjectCard
             key={project.title}
             title={project.title}
-            tags={project.tags}
             description={project.description}
             tech={project.tech}
             learning={project.learning}
