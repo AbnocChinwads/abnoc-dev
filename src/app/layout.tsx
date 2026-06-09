@@ -44,7 +44,7 @@ export default function RootLayout({
                 <Link href="/about">[About]</Link>
               </li>
               <li>
-                <Link href="/links">[Links]</Link>
+                <Link href="/contacts">[Contact Me]</Link>
               </li>
             </ul>
           </nav>

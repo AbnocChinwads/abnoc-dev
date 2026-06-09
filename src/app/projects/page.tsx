@@ -4,7 +4,10 @@ import { projects } from "../data/projects";
 export default function Projects() {
   return (
     <main className="max-w-3xl mx-auto w-full px-4 py-10 space-y-12">
-      <h2>Projects</h2>
+      <div>
+        <span className="text-green-200">{">"}</span>{" "}
+        <span className="font-bold">Projects</span>
+      </div>
 
       <div>
         {projects.map((project) => (
