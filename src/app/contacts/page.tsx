@@ -27,7 +27,11 @@ export default function Contacts() {
             LinkedIn
           </a>
         </div>
-        <div>
+        <div className="ml-4">
+          <span className="text-green-200">{">"}</span>{" "}
+          <span className="font-bold">Email</span>
+        </div>
+        <div className="ml-4">
           <ContactForm />
         </div>
       </section>
