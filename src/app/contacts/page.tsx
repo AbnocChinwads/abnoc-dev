@@ -1,3 +1,5 @@
+import ContactForm from "./ContactForm";
+
 export default function Contacts() {
   return (
     <main className="max-w-3xl mx-auto w-full px-4 py-10 space-y-12">
@@ -26,9 +28,7 @@ export default function Contacts() {
           </a>
         </div>
         <div>
-          <a className="ml-4 underline" target="_blank" href="#">
-            Email
-          </a>
+          <ContactForm />
         </div>
       </section>
     </main>
