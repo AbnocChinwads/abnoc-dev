@@ -11,7 +11,7 @@ export default function Contacts() {
 
         <div>
           <a
-            className="ml-4 underline"
+            className="ml-8 underline"
             target="_blank"
             href="https://github.com/AbnocChinwads"
           >
@@ -20,16 +20,18 @@ export default function Contacts() {
         </div>
         <div>
           <a
-            className="ml-4 underline"
+            className="ml-8 underline"
             target="_blank"
             href="https://www.linkedin.com/in/daniel-mctighe-a63952195/"
           >
             LinkedIn
           </a>
         </div>
-        <div className="ml-4">
+      </section>
+      <section className="ml-4 space-y-2">
+        <div>
           <span className="text-green-200">{">"}</span>{" "}
-          <span className="font-bold">Email</span>
+          <span className="font-bold">Get in touch</span>
         </div>
         <div className="ml-4">
           <ContactForm />
