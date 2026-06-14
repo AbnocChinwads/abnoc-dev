@@ -40,7 +40,7 @@ export default function Home() {
           <span className="text-green-200">{">"}</span>{" "}
           <span className="font-bold">Featured Projects</span>
         </div>
-
+        <div className="ml-4">
         {featuredProjects.map((project) => (
           <ProjectCard
             key={project.title}
@@ -49,8 +49,9 @@ export default function Home() {
             variant="compact"
           />
         ))}
+        </div>
 
-        <Link href="/projects">[View all projects]</Link>
+        <Link href="/projects" className="ml-4">[View all projects]</Link>
       </section>
     </main>
   );

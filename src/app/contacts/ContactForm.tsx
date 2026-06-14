@@ -96,7 +96,7 @@ export default function ContactForm() {
         className="hidden"
       />
       {success && <p className="text-green-400"> {">"} Message sent successfully</p>}
-      <div>
+      <div className="ml-4">
         <button type="submit" disabled={loading}>
           [{loading ? "Sending..." : "Send Message"}]
         </button>
