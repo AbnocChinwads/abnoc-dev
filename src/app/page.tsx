@@ -4,7 +4,6 @@ import { projects } from "./data/projects";
 import {
   TerminalHeader,
   TerminalList,
-  TerminalListItem,
 } from "./components/terminal";
 
 export default function Home() {

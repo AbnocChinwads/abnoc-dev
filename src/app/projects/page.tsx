@@ -9,14 +9,14 @@ export default function Projects() {
         <span className="font-bold">Projects</span>
       </div>
 
-      <div>
+      <div className="mt-8 space-y-12">
         {projects.map((project) => (
           <ProjectCard
             key={project.title}
             title={project.title}
             description={project.description}
-            tech={project.tech}
-            learning={project.learning}
+            stack={project.stack}
+            context={project.context}
             github={project.github}
             live={project.live}
             variant="full"

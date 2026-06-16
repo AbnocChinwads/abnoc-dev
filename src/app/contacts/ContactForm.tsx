@@ -7,6 +7,10 @@ export default function ContactForm() {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [success, setSuccess] = useState(false);
 
+  function isValidEmail(email: string) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setErrors({});
@@ -24,7 +28,11 @@ export default function ContactForm() {
       website: (form.elements.namedItem("website") as HTMLInputElement).value,
     };
 
-    if (!data.email) newErrors.email = "Please enter your email address.";
+    if (!data.email) {
+      newErrors.email = "Please enter your email address.";
+    } else if (!isValidEmail(data.email)) {
+      newErrors.email = "Please enter a valid email address.";
+    }
     if (!data.subject) newErrors.subject = "Please enter a subject.";
     if (!data.message) newErrors.message = "Please enter a message.";
 
@@ -52,16 +60,19 @@ export default function ContactForm() {
   }
 
   return (
-    <form className="ml-4 space-y-2" onSubmit={handleSubmit}>
+    <form className="ml-8 space-y-2" onSubmit={handleSubmit} noValidate>
       <div>
         <input
           name="email"
           type="email"
           placeholder="Your email"
+          autoComplete="off"
           required
-          className="ml-4 w-full bg-transparent border-0 border-b border-green-300 outline-none py-1"
+          className="w-full bg-transparent border-0 border-b border-green-300 outline-none py-1"
         />
-        {errors.email && <p className="text-red-400 text-sm">{errors.email}</p>}
+        {errors.email && (
+          <p className="text-red-400 text-sm">! {errors.email}</p>
+        )}
       </div>
       <div>
         <input
@@ -69,10 +80,10 @@ export default function ContactForm() {
           placeholder="Subject"
           required
           minLength={3}
-          className="ml-4 w-full bg-transparent border-0 border-b border-green-300 outline-none py-1"
+          className="w-full bg-transparent border-0 border-b border-green-300 outline-none py-1"
         />
         {errors.subject && (
-          <p className="text-red-400 text-sm">{errors.subject}</p>
+          <p className="text-red-400 text-sm">! {errors.subject}</p>
         )}
       </div>
       <div>
@@ -81,10 +92,10 @@ export default function ContactForm() {
           placeholder="Message"
           required
           minLength={10}
-          className="ml-4 w-full bg-transparent border-l border-b border-green-300 pl-3 outline-none resize-y"
+          className="w-full bg-transparent border-l border-b border-green-300 pl-3 outline-none resize-y"
         />
         {errors.message && (
-          <p className="text-red-400 text-sm">{errors.message}</p>
+          <p className="text-red-400 text-sm">! {errors.message}</p>
         )}
       </div>
 
@@ -95,8 +106,10 @@ export default function ContactForm() {
         tabIndex={-1}
         className="hidden"
       />
-      {success && <p className="text-green-400"> {">"} Message sent successfully</p>}
-      <div className="ml-4">
+      {success && (
+        <p className="text-green-200"> {">"} Message sent successfully</p>
+      )}
+      <div>
         <button type="submit" disabled={loading}>
           [{loading ? "Sending..." : "Send Message"}]
         </button>

@@ -1,8 +1,14 @@
+import {
+  TerminalHeader,
+  TerminalList,
+  TerminalListItem,
+} from "../components/terminal";
+
 type ProjectCardProps = {
   title: string;
   description: string;
-  tech?: string[];
-  learning?: string;
+  stack?: string[];
+  context?: string;
   github?: string;
   live?: string;
   variant?: "full" | "compact";
@@ -11,52 +17,58 @@ type ProjectCardProps = {
 export default function ProjectCard({
   title,
   description,
-  tech,
-  learning,
+  stack,
+  context,
   github,
   live,
   variant = "full",
 }: ProjectCardProps) {
   return (
-    <article className="mb-10 space-y-2">
-      {/* Title line (like terminal header output) */}
-      <div>
-        <span className="text-green-200">{">"}</span>{" "}
-        <span className="font-bold">{title}</span>
-      </div>
+    <article className="space-y-2">
+      {/* Title */}
+      <TerminalHeader>{title}</TerminalHeader>
 
       {/* Description */}
       <p className="ml-4">{description}</p>
 
-      {/* Learning / reflection */}
-      {learning && (
+      {/* Context */}
+      {context && (
         <p className="ml-4 text-green-300">
-          <span className="text-green-200">learning:</span> {learning}
+          <span className="text-green-200">context:</span> {context}
         </p>
       )}
 
-      {/* Tech tags */}
-      {tech && tech.length > 0 && (
-        <div className="ml-8 flex flex-wrap gap-2">
-          {tech.map((item) => (
-            <span key={item} className="text-xs text-green-300">
-              [{item}]
-            </span>
+      {/* Tech stack */}
+      {stack && stack.length > 0 && (
+        <TerminalList>
+          {stack.map((item) => (
+            <TerminalListItem key={item}>{item}</TerminalListItem>
           ))}
-        </div>
+        </TerminalList>
       )}
 
       {/* Links */}
       {variant === "full" && (github || live) && (
-        <div className="ml-8 text-sm">
+        <div className="ml-4 font-mono text-sm space-x-4">
           {github && (
-            <a className="mr-4 underline" target="_blank" rel="noreferrer" href={github}>
-              GitHub
+            <a
+              className="text-green-200 hover:underline"
+              target="_blank"
+              rel="noreferrer"
+              href={github}
+            >
+              github
             </a>
           )}
+
           {live && (
-            <a className="underline" target="_blank" rel="noreferrer" href={live}>
-              Live
+            <a
+              className="text-green-200 hover:underline"
+              target="_blank"
+              rel="noreferrer"
+              href={live}
+            >
+              live
             </a>
           )}
         </div>

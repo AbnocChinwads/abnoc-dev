@@ -1,38 +1,46 @@
 export const projects = [
-    {
-        title: "abnoc.dev Portfolio",
-        description: "A personal portfolio and developer CV built with Next.js and deployed to my self-hosted environment.",
-        tech: ["Frontend", "Next.js", "Typescript"],
-        learning: "Learning modern React-based frameworks and deployment workflows.",
-        github:"https://github.com/AbnocChinwads/abnoc-dev",
-        live:"https://abnoc.dev",
-        featured: false,
-    },
-    {
-        title: "PoE2 Randomiser",
-        description: "A tool for generating randomised builds and configurations for Path of Exile 2.",
-        tech: ["Backend", "API", "PostgreSQL"],
-        learning: "Backend API design, persistence, and application structure.",
-        github:"https://github.com/AbnocChinwads/poe-2-randomiser",
-        live:"https://buildroll.abnoc.dev",
-        featured: true,
-    },
-    {
-        title: "Resource Management Game",
-        description: "A browser-based resource management game with gathering, building systems, and early population mechanics.",
-        tech: ["Game", "Backend", "Simulation"],
-        learning: "Game loop design, state management, and database-driven gameplay systems.",
-        github:"https://github.com/AbnocChinwads/resource-management-game",
-        live:"https://icecream.abnoc.dev",
-        featured: false,
-    },
-    {
-        title: "Self-Hosting Infrastructure",
-        description: "A self-hosted environment used to deploy and run my applications.",
-        tech: ["DevOps", "Docker", "Linux"],
-        learning: "Deployment workflows, containerisation, and server management.",
-        github:"",
-        live:"",
-        featured: true,
-    },
+  {
+    title: "abnoc.dev Portfolio System",
+    description:
+      "Personal portfolio built as a terminal-inspired full-stack application. Includes Next.js frontend, API routes for contact handling, and containerised deployment to a self-hosted environment.",
+    stack: ["Next.js", "TypeScript", "Node.js", "Docker"],
+    context:
+      "Exploring full-stack architecture, deployment pipelines, and system design through a production-style portfolio project.",
+    github: "https://github.com/AbnocChinwads/abnoc-dev",
+    live: "https://abnoc.dev",
+    featured: false,
+  },
+  {
+    title: "PoE2 Build Randomiser",
+    description:
+      "Web application for generating randomised builds and configurations for Path of Exile 2 using structured backend logic and API-driven data flow.",
+    stack: ["Node.js", "API Design", "PostgreSQL"],
+    context:
+      "Focus on backend design, stateless API structure, and persistence patterns for structured game data.",
+    github: "https://github.com/AbnocChinwads/poe-2-randomiser",
+    live: "https://buildroll.abnoc.dev",
+    featured: true,
+  },
+  {
+    title: "Resource Management Simulation Game",
+    description:
+      "Browser-based simulation game featuring resource gathering, building systems, and persistent state management with database-backed progression.",
+    stack: ["TypeScript", "Backend Logic", "PostgreSQL"],
+    context:
+      "Exploring game loop architecture, state persistence, and structured simulation systems.",
+    github: "https://github.com/AbnocChinwads/resource-management-game",
+    live: "https://icecream.abnoc.dev",
+    featured: false,
+  },
+  {
+    title: "Self-Hosted Infrastructure Stack",
+    description:
+      "Containerised self-hosting environment used to deploy and manage multiple personal applications behind a reverse proxy.",
+    stack: ["Docker", "Linux", "CI/CD", "Reverse Proxy"],
+    context:
+      "Practical experience with deployment automation, container orchestration, and server-level application management.",
+    github: "",
+    live: "",
+    featured: true,
+  },
 ];
