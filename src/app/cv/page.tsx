@@ -21,7 +21,7 @@ export default function CV() {
   }
 
   return (
-    <main className="max-w-3xl mx-auto w-full px-3 sm:px-6 py-8 sm:py-10 space-y-8 sm:space-y-10">
+    <main className="max-w-3xl mx-auto w-full px-3 sm:px-6 py-8 sm:py-10 space-y-8 sm:space-y-10 print:text-sm">
       {/* Header */}
       <div className="hidden print:block mb-3 sm:mb-6">
         <h1 className="text-2xl font-bold">Daniel McTighe</h1>
