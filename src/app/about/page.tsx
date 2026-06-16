@@ -1,79 +1,81 @@
+import {
+  TerminalHeader,
+  TerminalList,
+  TerminalListItem,
+} from "../components/terminal";
+
 export default function About() {
   return (
     <main className="max-w-3xl mx-auto w-full px-4 py-10 space-y-12">
-      <div>
-        <span className="text-green-200">{">"}</span>{" "}
-        <span className="font-bold">About</span>
-      </div>
+      <TerminalHeader>About</TerminalHeader>
 
       <section className="space-y-2">
-        <div>
-          <span className="text-green-200">{">"}</span>{" "}
-          <span className="font-bold">Who am I?</span>
-        </div>
+        <TerminalHeader>Who Am I?</TerminalHeader>
 
         <p className="ml-4">
-          Hi, I go by AbnocChinwads on GitHub. I am a junior full-stack
-          developer looking to break into the developer space, I enjoy learning
-          new tooling systems by building a project or two with them.
+          I am a self-taught developer transitioning from retail into software
+          engineering. I have previously studied full-stack development through
+          structured online courses and an online degree program, and I am
+          currently developing my skills through building and deploying personal
+          projects.
         </p>
 
         <p className="ml-4">
-          Recently I wanted to learn how to self-host my own web apps as live
-          services, so I built my own home server PC and learnt Docker. Then I
-          learned a little more Linux to connect to it securely via SSH and to
-          ensure the server itself maintained a robust and safe environment for
-          my projects.
+          My focus is learning by doing — building full-stack applications,
+          backend systems, and self-hosted infrastructure that I can run and
+          maintain myself.
         </p>
       </section>
 
       <section className="space-y-2">
-        <div>
-          <span className="text-green-200">{">"}</span>{" "}
-          <span className="font-bold">Current Focus</span>
-        </div>
+        <TerminalHeader>Current Focus</TerminalHeader>
 
         <p className="ml-4">
-          I'm currently building this portfolio site using Next.js. I'm also
-          deploying updates to a live server using Git and GitHub workflows,
-          which my other self-hosted projects currently utilise.
+          I am currently building and improving this portfolio while expanding
+          my self-hosted infrastructure. I am also strengthening my full-stack
+          skills through projects using Next.js, Node.js, and PostgreSQL.
         </p>
 
         <p className="ml-4">
-          My current development work is split between improving this portfolio,
-          maintaining existing projects, and expanding my self-hosted
+          A key focus right now is improving how I structure, deploy, and
+          maintain production-like applications.
+        </p>
+      </section>
+
+      <section className="space-y-2">
+        <TerminalHeader>Skills/Stack</TerminalHeader>
+
+        <TerminalList>
+          <TerminalListItem>
+            Frontend: HTML, CSS, JavaScript, Next.js
+          </TerminalListItem>
+          <TerminalListItem>
+            Backend: Node.js, Express
+          </TerminalListItem>
+          <TerminalListItem>
+            Databases: PostgreSQL
+          </TerminalListItem>
+          <TerminalListItem>
+            Infrastructure: Docker, Linux, self-hosting
+          </TerminalListItem>
+          <TerminalListItem>
+            Deployment: GitHub Actions, CI/CD, reverse proxies
+          </TerminalListItem>
+        </TerminalList>
+      </section>
+
+      <section className="space-y-2">
+        <TerminalHeader>What Do I Enjoy Building?</TerminalHeader>
+
+        <p className="ml-4">
+          I enjoy building systems that go beyond the frontend — especially
+          backend logic, data-driven applications, and deployment
           infrastructure.
         </p>
-      </section>
-
-      <section className="space-y-2">
-        <div>
-          <span className="text-green-200">{">"}</span>{" "}
-          <span className="font-bold">Skills/Stacks</span>
-        </div>
-
         <p className="ml-4">
-          Primarily I have worked with base HTML, CSS, and JS. Recently I built
-          a project using Node.js and Express.Js, with a PostgreSQL database,
-          which I maintain myself through the use of PGAdmin4.
-        </p>
-
-        <p className="ml-4">
-          I have worked with Docker for containerisation and deployment of
-          applications, along with Linux server management for maintaining and
-          securing my home server environment.
-        </p>
-      </section>
-
-      <section className="space-y-2">
-        <div>
-          <span className="text-green-200">{">"}</span>{" "}
-          <span className="font-bold">What do I enjoy building?</span>
-        </div>
-
-        <p className="ml-4">
-          Anything that challenges me to learn new structures or tools, projects
-          that relate to my interests
+          I am particularly interested in projects I can run and maintain
+          myself, where I can see the full lifecycle from development to
+          production.
         </p>
       </section>
     </main>

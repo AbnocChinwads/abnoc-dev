@@ -1,6 +1,11 @@
 import Link from "next/link";
 import ProjectCard from "./components/ProjectCard";
 import { projects } from "./data/projects";
+import {
+  TerminalHeader,
+  TerminalList,
+  TerminalListItem,
+} from "./components/terminal";
 
 export default function Home() {
   const featuredProjects = projects.filter((p) => p.featured);
@@ -9,49 +14,44 @@ export default function Home() {
     <main className="max-w-3xl mx-auto w-full px-4 py-10 space-y-12">
       {/* HERO */}
       <section className="space-y-2">
-        <div>
-          <span className="text-green-200">{">"}</span>{" "}
-          <span className="font-bold">AbnocChinwads</span>
-        </div>
+        <TerminalHeader>Abnoc Chinwads</TerminalHeader>
 
         <p className="ml-4">
-          Developer focused on web applications, self-hosted infrastructure, and
-          currently learning full-stack systems with Next.js and Node.js.
+          Self-taught developer building and deploying real-world projects to
+          grow from retail into software engineering.
         </p>
       </section>
 
       {/* POSITIONING */}
       <section className="space-y-2">
-        <div>
-          <span className="text-green-200">{">"}</span>{" "}
-          <span className="font-bold">What I build</span>
-        </div>
-
+        <TerminalHeader>What I build</TerminalHeader>
+        
         <p className="ml-4">
-          I build and self-host web applications while learning modern
-          full-stack development through practical projects and infrastructure
-          work.
+          I build web applications and backend systems, then deploy and maintain
+          them on my own infrastructure. Each project is an opportunity to learn
+          new technologies while gaining experience across the full development
+          lifecycle.
         </p>
       </section>
 
       {/* FEATURED WORK */}
       <section className="space-y-4">
-        <div>
-          <span className="text-green-200">{">"}</span>{" "}
-          <span className="font-bold">Featured Projects</span>
-        </div>
-        <div className="ml-4">
-        {featuredProjects.map((project) => (
-          <ProjectCard
-            key={project.title}
-            title={project.title}
-            description={project.description}
-            variant="compact"
-          />
-        ))}
-        </div>
+        <TerminalHeader>Featured Projects</TerminalHeader>
+        
+        <TerminalList>
+          {featuredProjects.map((project) => (
+            <ProjectCard
+              key={project.title}
+              title={project.title}
+              description={project.description}
+              variant="compact"
+            />
+          ))}
+        </TerminalList>
 
-        <Link href="/projects" className="ml-4">[View all projects]</Link>
+        <Link href="/projects" className="ml-8">
+          [View all projects]
+        </Link>
       </section>
     </main>
   );

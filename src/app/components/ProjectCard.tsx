@@ -50,12 +50,12 @@ export default function ProjectCard({
       {variant === "full" && (github || live) && (
         <div className="ml-8 text-sm">
           {github && (
-            <a className="mr-4 underline" target="_blank" href={github}>
+            <a className="mr-4 underline" target="_blank" rel="noreferrer" href={github}>
               GitHub
             </a>
           )}
           {live && (
-            <a className="underline" target="_blank" href={live}>
+            <a className="underline" target="_blank" rel="noreferrer" href={live}>
               Live
             </a>
           )}

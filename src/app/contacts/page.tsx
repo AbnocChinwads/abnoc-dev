@@ -1,41 +1,43 @@
 import ContactForm from "./ContactForm";
+import {
+  TerminalHeader,
+  TerminalList,
+  TerminalListItem,
+} from "../components/terminal";
 
 export default function Contacts() {
   return (
     <main className="max-w-3xl mx-auto w-full px-4 py-10 space-y-12">
-      <section className="ml-4 space-y-2">
-        <div>
-          <span className="text-green-200">{">"}</span>{" "}
-          <span className="font-bold">Contact</span>
-        </div>
+      <section className="space-y-2">
+        <TerminalHeader>Contact</TerminalHeader>
 
-        <div>
-          <a
-            className="ml-8 underline"
-            target="_blank"
-            href="https://github.com/AbnocChinwads"
-          >
-            GitHub
-          </a>
-        </div>
-        <div>
-          <a
-            className="ml-8 underline"
-            target="_blank"
-            href="https://www.linkedin.com/in/daniel-mctighe-a63952195/"
-          >
-            LinkedIn
-          </a>
-        </div>
+        <TerminalList>
+          <TerminalListItem>
+            <a
+              className="hover:underline"
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/AbnocChinwads"
+            >
+              GitHub
+            </a>
+          </TerminalListItem>
+          <TerminalListItem>
+            <a
+              className="hover:underline"
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.linkedin.com/in/daniel-mctighe-a63952195/"
+            >
+              LinkedIn
+            </a>
+          </TerminalListItem>
+        </TerminalList>
       </section>
-      <section className="ml-4 space-y-2">
-        <div>
-          <span className="text-green-200">{">"}</span>{" "}
-          <span className="font-bold">Get in touch</span>
-        </div>
-        <div className="ml-4">
-          <ContactForm />
-        </div>
+      <section className="space-y-2">
+        <TerminalHeader>Get in touch</TerminalHeader>
+
+        <ContactForm />
       </section>
     </main>
   );
