@@ -31,25 +31,28 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-black text-green-300 font-mono">
         <div className="max-w-4xl mx-auto w-full border border-green-700 p-4 my-4">
-        <header className="border-b border-green-700 p-4">
-          <nav>
-            <ul className="flex gap-4">
-              <li>
-                <Link href="/">[Home]</Link>
-              </li>
-              <li>
-                <Link href="/projects">[Projects]</Link>
-              </li>
-              <li>
-                <Link href="/about">[About]</Link>
-              </li>
-              <li>
-                <Link href="/contacts">[Contact Me]</Link>
-              </li>
-            </ul>
-          </nav>
-        </header>
-        {children}
+          <header className="border-b border-green-700 p-4">
+            <nav>
+              <ul className="flex gap-4">
+                <li>
+                  <Link href="/">[Home]</Link>
+                </li>
+                <li>
+                  <Link href="/projects">[Projects]</Link>
+                </li>
+                <li>
+                  <Link href="/about">[About]</Link>
+                </li>
+                <li>
+                  <Link href="/cv">[CV]</Link>
+                </li>
+                <li>
+                  <Link href="/contacts">[Contact Me]</Link>
+                </li>
+              </ul>
+            </nav>
+          </header>
+          {children}
         </div>
       </body>
     </html>
