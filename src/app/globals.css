@@ -11,3 +11,15 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
+
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  button, a {
+    color: black;
+    text-decoration: none;
+  }
+}

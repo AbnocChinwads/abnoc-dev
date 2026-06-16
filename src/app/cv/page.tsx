@@ -1,3 +1,5 @@
+"use client";
+
 import { cv } from "../data/cv";
 import { projects } from "../data/projects";
 import {
@@ -14,19 +16,28 @@ export default function CV() {
     ...projects.filter((p) => p.title.includes("Portfolio")),
   ];
 
+  function handleDownloadPDF() {
+    window.print();
+  }
+
   return (
-    <main className="max-w-3xl mx-auto w-full px-4 py-10 space-y-10">
+    <main className="max-w-3xl mx-auto w-full px-4 py-10 space-y-10 print:space-y-6">
       {/* Header */}
-      <div className="space-y-2">
+      <div className="hidden print:block mb-6">
+        <h1 className="text-2xl font-bold">Daniel McTighe</h1>
+        <p className="text-sm">Junior Full-Stack / Backend Developer</p>
+        <p className="text-xs">
+          abnoc.dev · github.com/AbnocChinwads · LinkedIn
+        </p>
+      </div>
+
+      <div className="space-y-2 print:hidden">
         <TerminalHeader>Curriculum Vitae</TerminalHeader>
 
         <div className="ml-4 flex gap-4 text-sm">
-          <a className="hover:underline" href="/cv.pdf" target="_blank">
-            [View PDF]
-          </a>
-          <a className="hover:underline" href="/cv.pdf" download>
+          <button onClick={handleDownloadPDF} className="hover:underline">
             [Download PDF]
-          </a>
+          </button>
         </div>
       </div>
 

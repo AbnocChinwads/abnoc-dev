@@ -31,7 +31,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-black text-green-300 font-mono">
         <div className="max-w-4xl mx-auto w-full border border-green-700 p-4 my-4">
-          <header className="border-b border-green-700 p-4">
+          <header className="border-b border-green-700 p-4 print:hidden">
             <nav>
               <ul className="flex gap-4">
                 <li>
