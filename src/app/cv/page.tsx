@@ -21,9 +21,9 @@ export default function CV() {
   }
 
   return (
-    <main className="max-w-3xl mx-auto w-full px-4 py-10 space-y-10 print:space-y-6">
+    <main className="max-w-3xl mx-auto w-full px-3 sm:px-6 py-8 sm:py-10 space-y-8 sm:space-y-10">
       {/* Header */}
-      <div className="hidden print:block mb-6">
+      <div className="hidden print:block mb-3 sm:mb-6">
         <h1 className="text-2xl font-bold">Daniel McTighe</h1>
         <p className="text-sm">Junior Full-Stack / Backend Developer</p>
         <p className="text-xs">
@@ -34,7 +34,7 @@ export default function CV() {
       <div className="space-y-2 print:hidden">
         <TerminalHeader>Curriculum Vitae</TerminalHeader>
 
-        <div className="ml-4 flex gap-4 text-sm">
+        <div className="ml-2 sm:ml-4 flex gap-4 text-sm sm:text-base leading-relaxed">
           <button onClick={handleDownloadPDF} className="hover:underline">
             [Download PDF]
           </button>
@@ -44,7 +44,7 @@ export default function CV() {
       {/* Profile */}
       <section className="space-y-2">
         <TerminalHeader>Profile</TerminalHeader>
-        <p className="ml-4">{cv.profile}</p>
+        <p className="ml-2 sm:ml-4 text-sm sm:text-base leading-relaxed">{cv.profile}</p>
       </section>
 
       {/* Projects */}
@@ -52,12 +52,12 @@ export default function CV() {
         <TerminalHeader>Projects</TerminalHeader>
 
         {orderedProjects.map((project) => (
-          <div className="mb-4 ml-4" key={project.title}>
-            <p className="font-bold">{project.title}</p>
+          <div className="mb-6 ml-2 sm:ml-4" key={project.title}>
+            <p className="font-bold text-sm sm:text-base leading-relaxed">{project.title}</p>
 
-            <p>{project.description}</p>
+            <p className="text-sm sm:text-base leading-relaxed">{project.description}</p>
 
-            <p className="text-sm">[{project.stack.join(" · ")}]</p>
+            <p className="text-sm sm:text-base leading-relaxed">[{project.stack.join(" · ")}]</p>
           </div>
         ))}
       </section>
@@ -82,10 +82,10 @@ export default function CV() {
         <TerminalHeader>Experience</TerminalHeader>
 
         {cv.experience.map((job) => (
-          <div key={job.title}>
-            <p className="ml-4 font-bold">{job.title}</p>
+          <div key={job.title} className="mb-6 ml-2 sm:ml-4">
+            <p className="ml-2 sm:ml-4 font-bold text-sm sm:text-base leading-relaxed">{job.title}</p>
 
-            <p className="ml-4">{job.description}</p>
+            <p className="ml-2 sm:ml-4 text-sm sm:text-base leading-relaxed">{job.description}</p>
           </div>
         ))}
       </section>

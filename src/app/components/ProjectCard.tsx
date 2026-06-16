@@ -29,11 +29,11 @@ export default function ProjectCard({
       <TerminalHeader>{title}</TerminalHeader>
 
       {/* Description */}
-      <p className="ml-4">{description}</p>
+      <p className="ml-2 sm:ml-4 text-sm sm:text-base leading-relaxed">{description}</p>
 
       {/* Context */}
       {context && (
-        <p className="ml-4 text-green-300">
+        <p className="ml-2 sm:ml-4 text-green-300 text-sm sm:text-base leading-relaxed">
           <span className="text-green-200">context:</span> {context}
         </p>
       )}
@@ -49,7 +49,7 @@ export default function ProjectCard({
 
       {/* Links */}
       {variant === "full" && (github || live) && (
-        <div className="ml-4 font-mono text-sm space-x-4">
+        <div className="ml-2 sm:ml-4 font-mono text-sm space-x-4">
           {github && (
             <a
               className="text-green-200 hover:underline"

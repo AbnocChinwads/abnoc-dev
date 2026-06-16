@@ -7,7 +7,7 @@ import {
 
 export default function Contacts() {
   return (
-    <main className="max-w-3xl mx-auto w-full px-4 py-10 space-y-12">
+    <main className="max-w-3xl mx-auto w-full px-3 sm:px-4 py-8 sm:py-10 space-y-12">
       <section className="space-y-2">
         <TerminalHeader>Contact</TerminalHeader>
 

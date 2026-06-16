@@ -60,7 +60,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form className="ml-8 space-y-2" onSubmit={handleSubmit} noValidate>
+    <form className="ml-2 sm:ml-4 space-y-1 sm:space-y-2" onSubmit={handleSubmit} noValidate>
       <div>
         <input
           name="email"

@@ -10,12 +10,12 @@ export default function Home() {
   const featuredProjects = projects.filter((p) => p.featured);
 
   return (
-    <main className="max-w-3xl mx-auto w-full px-4 py-10 space-y-12">
+    <main className="max-w-3xl mx-auto w-full px-3 sm:px-4 py-8 sm:py-10 space-y-12">
       {/* HERO */}
       <section className="space-y-2">
         <TerminalHeader>Abnoc Chinwads</TerminalHeader>
 
-        <p className="ml-4">
+        <p className="ml-2 sm:ml-4">
           Self-taught developer building and deploying real-world projects to
           grow from retail into software engineering.
         </p>
@@ -25,7 +25,7 @@ export default function Home() {
       <section className="space-y-2">
         <TerminalHeader>What I build</TerminalHeader>
         
-        <p className="ml-4">
+        <p className="ml-2 sm:ml-4">
           I build web applications and backend systems, then deploy and maintain
           them on my own infrastructure. Each project is an opportunity to learn
           new technologies while gaining experience across the full development
@@ -48,7 +48,7 @@ export default function Home() {
           ))}
         </TerminalList>
 
-        <Link href="/projects" className="ml-8">
+        <Link href="/projects" className="ml-4 sm:ml-8">
           [View all projects]
         </Link>
       </section>

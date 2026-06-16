@@ -3,7 +3,7 @@ import { projects } from "../data/projects";
 
 export default function Projects() {
   return (
-    <main className="max-w-3xl mx-auto w-full px-4 py-10 space-y-12">
+    <main className="max-w-3xl mx-auto w-full px-3 sm:px-4 py-8 sm:py-10 space-y-12">
       <div>
         <span className="text-green-200">{">"}</span>{" "}
         <span className="font-bold">Projects</span>
