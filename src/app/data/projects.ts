@@ -25,7 +25,7 @@ export const projects = [
     title: "Resource Management Simulation Game",
     description:
       "Browser-based simulation game featuring resource gathering, building systems, and persistent state management with database-backed progression.",
-    stack: ["TypeScript", "Backend Logic", "PostgreSQL"],
+    stack: ["Node.js", "Backend Logic", "PostgreSQL"],
     context:
       "Exploring game loop architecture, state persistence, and structured simulation systems.",
     github: "https://github.com/AbnocChinwads/resource-management-game",
