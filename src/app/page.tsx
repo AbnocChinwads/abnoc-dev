@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import ProjectCard from "./components/ProjectCard";
 import { projects } from "./data/projects";
@@ -7,36 +8,61 @@ import {
 } from "./components/terminal";
 
 export default function Home() {
-  const featuredProjects = projects.filter((p) => p.featured);
+  const featuredProjects = projects.filter(
+    (p) => p.featured
+  );
 
   return (
     <main className="max-w-3xl mx-auto w-full px-3 sm:px-4 py-8 sm:py-10 space-y-12">
       {/* HERO */}
       <section className="space-y-2">
-        <TerminalHeader>Abnoc Chinwads</TerminalHeader>
+        <TerminalHeader>
+          Abnoc Chinwads
+        </TerminalHeader>
 
         <p className="ml-2 sm:ml-4">
-          Self-taught developer building and deploying real-world projects to
-          grow from retail into software engineering.
+          I'm a self-taught developer with a
+          particular interest in backend development
+          using JavaScript, Node.js, Express and
+          PostgreSQL. I'm currently working towards
+          my first professional software development
+          role.
         </p>
       </section>
 
       {/* POSITIONING */}
       <section className="space-y-2">
-        <TerminalHeader>What I build</TerminalHeader>
-        
+        <TerminalHeader>
+          What I Build
+        </TerminalHeader>
+
         <p className="ml-2 sm:ml-4">
-          I build web applications and backend systems, then deploy and maintain
-          them on my own infrastructure. Each project is an opportunity to learn
-          new technologies while gaining experience across the full development
-          lifecycle.
+          I enjoy building applications involving
+          server-side logic, database interaction
+          and interconnected systems.
+        </p>
+
+        <p className="ml-2 sm:ml-4">
+          My projects include a Path of Exile 2
+          randomiser I developed independently and
+          an ongoing resource management game with
+          persistent data and automated simulation.
+        </p>
+
+        <p className="ml-2 sm:ml-4">
+          I also maintain my own Linux server,
+          where I deploy and run my applications
+          using Docker and automated deployment
+          workflows.
         </p>
       </section>
 
       {/* FEATURED WORK */}
       <section className="space-y-4">
-        <TerminalHeader>Featured Projects</TerminalHeader>
-        
+        <TerminalHeader>
+          Featured Projects
+        </TerminalHeader>
+
         <TerminalList>
           {featuredProjects.map((project) => (
             <ProjectCard
@@ -48,7 +74,10 @@ export default function Home() {
           ))}
         </TerminalList>
 
-        <Link href="/projects" className="ml-4 sm:ml-8">
+        <Link
+          href="/projects"
+          className="ml-4 sm:ml-8"
+        >
           [View all projects]
         </Link>
       </section>
