@@ -1,3 +1,4 @@
+
 import {
   TerminalHeader,
   TerminalList,
@@ -10,72 +11,119 @@ export default function About() {
       <TerminalHeader>About</TerminalHeader>
 
       <section className="space-y-2">
-        <TerminalHeader>Who Am I?</TerminalHeader>
+        <TerminalHeader>
+          Who Am I?
+        </TerminalHeader>
 
         <p className="ml-2 sm:ml-4 text-sm sm:text-base leading-relaxed">
-          I am a self-taught developer transitioning from retail into software
-          engineering. I have previously studied full-stack development through
-          structured online courses and an online degree program, and I am
-          currently developing my skills through building and deploying personal
-          projects.
+          I'm a self-taught developer looking to
+          move from retail into my first professional
+          software development role. I've studied
+          web development through online courses
+          and continue developing my knowledge
+          through personal projects.
         </p>
 
         <p className="ml-2 sm:ml-4 text-sm sm:text-base leading-relaxed">
-          My focus is learning by doing — building full-stack applications,
-          backend systems, and self-hosted infrastructure that I can run and
-          maintain myself.
-        </p>
-      </section>
-
-      <section className="space-y-2">
-        <TerminalHeader>Current Focus</TerminalHeader>
-
-        <p className="ml-2 sm:ml-4 text-sm sm:text-base leading-relaxed">
-          I am currently building and improving this portfolio while expanding
-          my self-hosted infrastructure. I am also strengthening my full-stack
-          skills through projects using Next.js, Node.js, and PostgreSQL.
+          My main interests are backend development
+          and databases, particularly using
+          JavaScript, Node.js, Express and
+          PostgreSQL.
         </p>
 
         <p className="ml-2 sm:ml-4 text-sm sm:text-base leading-relaxed">
-          A key focus right now is improving how I structure, deploy, and
-          maintain production-like applications.
+          I learn primarily through practical
+          development, experimenting with different
+          approaches, investigating problems and
+          improving functionality as my projects
+          develop.
         </p>
       </section>
 
       <section className="space-y-2">
-        <TerminalHeader>Skills/Stack</TerminalHeader>
+        <TerminalHeader>
+          Current Focus
+        </TerminalHeader>
+
+        <p className="ml-2 sm:ml-4 text-sm sm:text-base leading-relaxed">
+          I'm continuing to develop a browser-based
+          resource management game involving
+          automated simulation, resource production,
+          building management and persistent player
+          data.
+        </p>
+
+        <p className="ml-2 sm:ml-4 text-sm sm:text-base leading-relaxed">
+          This project has given me experience
+          working through increasingly complex
+          technical problems, understanding how
+          different systems interact and refining
+          implementations as requirements change.
+        </p>
+
+        <p className="ml-2 sm:ml-4 text-sm sm:text-base leading-relaxed">
+          I'm also developing my knowledge of React,
+          Next.js and TypeScript through this
+          portfolio, alongside learning HTML5 Canvas
+          for browser-based game development.
+        </p>
+      </section>
+
+      <section className="space-y-2">
+        <TerminalHeader>
+          Skills/Stack
+        </TerminalHeader>
 
         <TerminalList>
           <TerminalListItem>
-            Frontend: HTML, CSS, JavaScript, Next.js
+            Frontend: HTML, CSS, JavaScript,
+            Bootstrap, EJS
           </TerminalListItem>
+
           <TerminalListItem>
             Backend: Node.js, Express
           </TerminalListItem>
+
           <TerminalListItem>
-            Databases: PostgreSQL
+            Databases: PostgreSQL, SQL
           </TerminalListItem>
+
           <TerminalListItem>
-            Infrastructure: Docker, Linux, self-hosting
+            Infrastructure: Ubuntu/Linux,
+            Docker, reverse proxies
           </TerminalListItem>
+
           <TerminalListItem>
-            Deployment: GitHub Actions, CI/CD, reverse proxies
+            Tools and deployment: Git,
+            GitHub Actions, self-hosting
+          </TerminalListItem>
+
+          <TerminalListItem>
+            Currently learning: React,
+            Next.js, TypeScript, HTML5 Canvas
           </TerminalListItem>
         </TerminalList>
       </section>
 
       <section className="space-y-2">
-        <TerminalHeader>What Do I Enjoy Building?</TerminalHeader>
+        <TerminalHeader>
+          What Do I Enjoy Building?
+        </TerminalHeader>
 
         <p className="ml-2 sm:ml-4 text-sm sm:text-base leading-relaxed">
-          I enjoy building systems that go beyond the frontend — especially
-          backend logic, data-driven applications, and deployment
-          infrastructure.
+          I particularly enjoy applications where
+          the logic behind the interface matters,
+          including database interactions, resource
+          calculations and systems that depend
+          on one another.
         </p>
+
         <p className="ml-2 sm:ml-4 text-sm sm:text-base leading-relaxed">
-          I am particularly interested in projects I can run and maintain
-          myself, where I can see the full lifecycle from development to
-          production.
+          I also enjoy the practical side of
+          running applications, from deploying
+          projects onto my own server to
+          troubleshooting problems and maintaining
+          the services they rely on.
         </p>
       </section>
     </main>
