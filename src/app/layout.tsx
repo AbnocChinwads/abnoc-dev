@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
@@ -16,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "abnoc.dev",
   description:
-    "A portfolio website to display my projects and act as a developer CV",
+    "Backend-focused junior developer portfolio showcasing JavaScript, Node.js, PostgreSQL, web applications and self-hosted infrastructure projects.",
 };
 
 export default function RootLayout({
@@ -38,16 +39,22 @@ export default function RootLayout({
                   <Link href="/">[Home]</Link>
                 </li>
                 <li>
-                  <Link href="/projects">[Projects]</Link>
+                  <Link href="/projects">
+                    [Projects]
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/about">[About]</Link>
+                  <Link href="/about">
+                    [About]
+                  </Link>
                 </li>
                 <li>
                   <Link href="/cv">[CV]</Link>
                 </li>
                 <li>
-                  <Link href="/contacts">[Contact Me]</Link>
+                  <Link href="/contacts">
+                    [Contact Me]
+                  </Link>
                 </li>
               </ul>
             </nav>
