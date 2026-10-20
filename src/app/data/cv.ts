@@ -1,36 +1,50 @@
+
 export const cv = {
   profile:
-    "Self-taught full-stack developer focused on building and deploying production-style web applications. I work primarily with Node.js and PostgreSQL, with experience using Next.js and Typescript, alongside Docker-based deployment and self hosted infrastructure. I enjoy building end-to-end systems that combine front end interfaces, backend APIs, and real deployment environments, with a strong focus on learning through practical implementation and iterative development. Currently seeking junior full-stack or back end developer roles where I can contribute to real-world systems and continue developing production engineering skills.",
+    "Self-taught, backend-focused developer with practical experience building web applications using JavaScript, Node.js, Express and PostgreSQL. My projects include a Path of Exile 2 randomiser I developed independently and an ongoing resource management game involving persistent player data and automated server-side simulation. I also deploy and maintain applications on my own Ubuntu server using Docker and GitHub Actions. I'm looking for my first professional software development role, ideally in junior backend or full-stack development, where I can contribute my existing knowledge and continue learning from experienced developers.",
+
   skills: {
-    frontend: "HTML, CSS, JavaScript, TypeScript, React, Next.js",
-    backend: "Node.js, Express",
-    databases: "PostgreSQL",
+    frontend:
+      "HTML, CSS, JavaScript, Bootstrap, EJS",
+    backend:
+      "Node.js, Express",
+    databases:
+      "PostgreSQL, SQL",
     infrastructure:
-      "Docker, Linux, GitHub Actions, CI/CD pipelines, reverse proxies",
+      "Ubuntu/Linux, Docker, GitHub Actions, reverse proxies",
     other:
-      "API design, system architecture fundamentals, self-hosting, deployment workflows",
+      "Git, API development, database migrations, debugging, self-hosting and deployment workflows",
+    learning:
+      "React, Next.js, TypeScript, HTML5 Canvas",
   },
+
   experience: [
     {
-      title: "Retail Sales Associate",
+      title: "Retail — Sales Assistant and Assistant Manager",
       description:
-        "Developed communication, problem-solving, and customer service skills in a fast-paced environment while independently building full-stack development projects outside of work.",
+        "Experience in customer-facing retail and assistant management, developing communication, teamwork, problem-solving and organisational skills. Alongside my retail career, I have continued developing my technical knowledge through personal software projects.",
     },
   ],
+
   education: [
     {
-      title: "Online Full-Stack Web Development Programme (Learning People)",
-      description: "partial completion",
+      title:
+        "Online Full-Stack Web Development Programme (Learning People)",
+      description:
+        "Partially completed",
     },
     {
-      title: "Udemy: Full-Stack Web Development (Angela Yu)",
-      description: "partial completion",
+      title:
+        "Udemy: Full-Stack Web Development (Angela Yu)",
+      description:
+        "Partially completed",
     },
   ],
+
   interests: [
-    "Backend systems and API design",
-    "Full-stack application architecture",
-    "Self-hosted infrastructure and deployment automation",
-    "Building production-style personal projects",
+    "Backend development and database-driven applications",
+    "Building and improving interconnected application systems",
+    "Self-hosted infrastructure and deployment",
+    "Browser-based game development",
   ],
 };
