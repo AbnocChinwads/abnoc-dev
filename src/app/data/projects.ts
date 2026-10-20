@@ -1,11 +1,12 @@
+
 export const projects = [
   {
-    title: "abnoc.dev Portfolio System",
+    title: "abnoc.dev Portfolio",
     description:
-      "Personal portfolio built as a terminal-inspired full-stack application. Includes Next.js frontend, API routes for contact handling, and containerised deployment to a self-hosted environment.",
-    stack: ["Next.js", "TypeScript", "Node.js", "Docker"],
+      "My portfolio uses Next.js, React and TypeScript, with a contact form handled by a server-side API route. I use it to gain experience with these tools and deploy it in Docker on my Ubuntu server.",
+    stack: ["Next.js", "React", "TypeScript", "Docker"],
     context:
-      "Exploring full-stack architecture, deployment pipelines, and system design through a production-style portfolio project.",
+      "Learning React components, Next.js routing and TypeScript while maintaining a site for my projects and CV.",
     github: "https://github.com/AbnocChinwads/abnoc-dev",
     live: "https://abnoc.dev",
     featured: false,
@@ -13,10 +14,10 @@ export const projects = [
   {
     title: "PoE2 Build Randomiser",
     description:
-      "Web application for generating randomised builds and configurations for Path of Exile 2 using structured backend logic and API-driven data flow.",
-    stack: ["Node.js", "API Design", "PostgreSQL"],
+      "A Path of Exile 2 randomiser I built independently with Node.js, Express, EJS and PostgreSQL. It chooses a random class or a skill gem for the selected tier.",
+    stack: ["Node.js", "Express", "EJS", "PostgreSQL"],
     context:
-      "Focus on backend design, stateless API structure, and persistence patterns for structured game data.",
+      "Built through experimentation, connecting Express routes and form submissions to PostgreSQL data and server-rendered results.",
     github: "https://github.com/AbnocChinwads/poe-2-randomiser",
     live: "https://buildroll.abnoc.dev",
     featured: true,
@@ -24,21 +25,21 @@ export const projects = [
   {
     title: "Resource Management Simulation Game",
     description:
-      "Browser-based simulation game featuring resource gathering, building systems, and persistent state management with database-backed progression.",
-    stack: ["Node.js", "Backend Logic", "PostgreSQL"],
+      "An ongoing browser-based resource management game featuring persistent player settlements, worker management, production chains and a timed server-side simulation that handles resource production, consumption and building maintenance.",
+    stack: ["Node.js", "Express", "EJS", "PostgreSQL"],
     context:
-      "Exploring game loop architecture, state persistence, and structured simulation systems.",
+      "I've worked through the design and implementation of interconnected gameplay systems, investigated problems and refined functionality as the project has grown. This has involved database migrations, persistent player data, authentication and improving the performance of simulation processes.",
     github: "https://github.com/AbnocChinwads/resource-management-game",
     live: "https://icecream.abnoc.dev",
-    featured: false,
+    featured: true,
   },
   {
-    title: "Self-Hosted Infrastructure Stack",
+    title: "Self-Hosted Infrastructure",
     description:
-      "Containerised self-hosting environment used to deploy and manage multiple personal applications behind a reverse proxy.",
-    stack: ["Docker", "Linux", "CI/CD", "Reverse Proxy"],
+      "I maintain an Ubuntu server and Docker containers for my personal applications, with GitHub Actions workflows to build images and trigger deployments.",
+    stack: ["Ubuntu", "Docker", "GitHub Actions"],
     context:
-      "Practical experience with deployment automation, container orchestration, and server-level application management.",
+      "Keeping my projects running gives me regular practice with deployment and troubleshooting.",
     github: "",
     live: "",
     featured: true,
